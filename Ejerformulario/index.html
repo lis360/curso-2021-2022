@@ -11,7 +11,7 @@
             campo.style ="border:2px solid red";
         }
         function quitarRojo(campo) {
-
+            campo.style ="borde:1px solid black";
         }
     </script>
 </head>
@@ -22,20 +22,25 @@
             <table>
                 <tr>
                     <td><label for="nombre">Nombre</label></td>
-                    <td><input type="text" name="nombre" id="nombre"
+                    <td><input type="text" name="Nombre" id="Nombre"
                         value="" 
                         placeholder="Introduzca Nombre"
                         autofocus
-                        size="30"
+                        size=""
                         maxlength="10"
-                        onkeyup="pasarAMayusc(this)
-                        onblur=quitarRojo(this)">
+                        onkeyup="pasarAMayusc(this)"
+                        onblur="quitarRojo(this)">
                         </td>
                     
                 </tr>
                 <tr>
-                    <td>Apellido</td>
-                    <td><input type="text" name="apellido"></td>
+                    <td>Apellidos</td>
+                    <td><input type="text" 
+                        name="apellidos"
+                        id="apellidos"
+                        patter="[a-z]{10}[0-9]{2}"
+                        required>
+                    </td>
                 </tr>
                 <tr>
                     <td><label for="pass">password</label></td>
@@ -45,6 +50,7 @@
 
                     </td>
                 </tr>
+                
                 <tr>
                     <td><label for="pregunta">¿Mayor de edad?</label></td>
                     <td>
@@ -57,11 +63,12 @@
                 <tr>
                     <td><label for="aficiones">Aficiones</label></td>
                     <td>
-                        <input typpe="checkbox" name="deporte" id="deportes" value="d">
-                        <input typpe="checkbox" name="cine" id="cine" value="c">
-                        <input typpe="checkbox" name="viajar" id="viajar" value="v">
-                    </td>
-                </tr>
+                        <input type="checkbox" name="deporte" id="deportes" value="D"> <span>Deporte</span>
+                        <input type="checkbox" name="cine" id="cine" value="C"><spam>Cine</span> 
+                        <input type="checkbox" name="viajar" id="viajar" value="V"><span>Viaje</span>
+                        </td>
+                </tr>        
+                
                 <tr>
                     <td><label for="provincia"></label></td>
                     <td>
@@ -83,7 +90,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><label for="descripción">descripción</label></td>
+                    <td><label for="descripción">Descripción</label></td>
                     <td>
                        <textarea name="descripción" id="descripción" rows="10" cols="50" maxlength="50">algo</textarea>
                     </td>
@@ -97,17 +104,26 @@
                 <td>
                     <input type="email" name="email" id="email" required>
                     <input type="url" name="web" id="web" required value="http://">
-                    <input type="search" name="busqueda" id="busqueda"
-                    <imput type="telefono"
+                    <input type="search" name="busqueda" id="busqueda" required>
+                    <input type="telefono" name="telefono" id="telefono" required>
                 </td>
             
+                </tr>
+                <tr>
+                    <td><label for="fechas">Fechas</label></td>
+                    <td>
+                        <input type="date" name="fecha1" id="fecha1">
+                        <input type="datetime" name="fecha2" id="fecha2">
+                        <input type="datetime-local" name="fecha3" id="fecha3">
+                        <input type="time" name="fecha4" id="fecha4">
+                        <input type="mouth" name="fecha5" id="fecha5">
+                    </td>
                 </tr>
             
                 <tr>
                     <td><input type="reset" value="Borrar"></td>
                     <td><input type="submit" value="Envie Formulario"></td>
-                    <td><input type="button" name="boton" id="boton" value="Ocultar"
-                       onclick="document.getElementoById></td>    
+                    <td><input type="button" name="boton" id="boton" value="Ocultar" onclick="document.getElementoById('Apellidos').style='display: none'"></td>    
 
                 </tr>
             </table>
